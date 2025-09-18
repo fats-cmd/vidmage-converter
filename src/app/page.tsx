@@ -15,7 +15,7 @@ const page = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       {/* <NoSSRWrapper> */}
-      <Uploader onFileSelect={(file) => console.log(file)} />
+      <Uploader onFileSelect={(file: File) => console.log(file)} />
         {videoUrl && (
           <video
             src={videoUrl as string }
