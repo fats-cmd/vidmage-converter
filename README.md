@@ -1,3 +1,7 @@
+# vidmage-converter
+
+Easily convert any video or image to whatever format using ffmpeg on the web
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
