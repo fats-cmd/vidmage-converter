@@ -86,6 +86,13 @@ const Uploader: React.FC<UploaderProps> = ({ onFileSelect, onGifResult }) => {
     }
   };
 
+  const handleFileUpload = () => {}
+
+  // function to convert to gif
+  const convertToGif = () => {
+
+  }
+
   return (
     <div className="bg-amber-600 p-4 rounded flex flex-col items-center">
       <input
