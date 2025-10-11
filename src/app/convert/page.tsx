@@ -1,8 +1,9 @@
 "use client";
 
-import React from 'react';
-import Header from '@/components/common/Header';
-import Test from '@/components/test';
+import React from "react";
+import Header from "@/components/common/Header";
+import Test from "@/components/test";
+import { FfmpegProvider } from "@/hooks/FfmpegProvider";
 
 export default function ConvertPage() {
   return (
@@ -18,9 +19,11 @@ export default function ConvertPage() {
               Upload your video or image file to get started
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto">
-            <Test onFileSelect={() => {}} />
+            <FfmpegProvider>
+              <Test onFileSelect={() => {}} />
+            </FfmpegProvider>
           </div>
         </div>
       </main>
