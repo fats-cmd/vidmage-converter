@@ -10,7 +10,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Link
             href="/"
-            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent"
+            className=" vidd-text text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent"
           >
             Viid
           </Link>

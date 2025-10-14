@@ -12,7 +12,68 @@ export default function Home() {
       <main className="min-h-screen bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="flex flex-col items-center justify-center space-y-8 text-center pt-20">
-            <h1 className="text-5xl md:text-6xl font-bold">
+            <h1 className="text-5xl md:text-6xl font-bold flex items-center justify-center gap-6">
+              <span className="vidd-wrap" aria-hidden="false">
+                {/* Inline SVG logo for vidd: a stylized play/film icon with gradient */}
+                <svg
+                  className="vidd-logo"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="vidd logo"
+                >
+                  <defs>
+                    <linearGradient id="g1" x1="0" x2="1">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#10b981" />
+                    </linearGradient>
+                  </defs>
+                  <rect
+                    x="2"
+                    y="2"
+                    width="60"
+                    height="60"
+                    rx="12"
+                    fill="url(#g1)"
+                  />
+                  <path
+                    d="M24 20 L44 32 L24 44 V20 Z"
+                    fill="white"
+                    opacity="0.98"
+                  />
+                  {/* small film perforations */}
+                  <rect
+                    x="8"
+                    y="12"
+                    width="4"
+                    height="4"
+                    rx="1"
+                    fill="rgba(255,255,255,0.12)"
+                  />
+                  <rect
+                    x="8"
+                    y="28"
+                    width="4"
+                    height="4"
+                    rx="1"
+                    fill="rgba(255,255,255,0.12)"
+                  />
+                  <rect
+                    x="8"
+                    y="44"
+                    width="4"
+                    height="4"
+                    rx="1"
+                    fill="rgba(255,255,255,0.12)"
+                  />
+                </svg>
+
+                <span className="vidd-text">vidd</span>
+              </span>
+
               <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
                 Convert Videos and Images to GIF
               </span>
