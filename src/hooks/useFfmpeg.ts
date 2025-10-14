@@ -89,11 +89,11 @@ export function useFfmpeg() {
       throw new Error("Unsupported file type for GIF");
     }
     try {
-      setProgress(onProgress);
+      // progress reporting removed — run the command without wiring progress
       await ffmpeg.exec(args);
       return await readOutputAsBlob("output.gif", "image/gif");
     } finally {
-      setProgress(undefined);
+      // nothing to cleanup for progress
     }
   }
 
@@ -122,11 +122,10 @@ export function useFfmpeg() {
       throw new Error("Unsupported file type for MKV");
     }
     try {
-      setProgress(onProgress);
       await ffmpeg.exec(args);
       return await readOutputAsBlob("output.mkv", "video/x-matroska");
     } finally {
-      setProgress(undefined);
+      // nothing to cleanup for progress
     }
   }
 
@@ -138,11 +137,10 @@ export function useFfmpeg() {
     const ffmpeg = await writeFile("input", file);
     const args = ["-i", "input", "-c:a", "ac3", "output.ac3"];
     try {
-      setProgress(onProgress);
       await ffmpeg.exec(args);
       return await readOutputAsBlob("output.ac3", "audio/ac3");
     } finally {
-      setProgress(undefined);
+      // nothing to cleanup for progress
     }
   }
 
@@ -191,11 +189,10 @@ export function useFfmpeg() {
       throw new Error("Unsupported file type for MP4");
     }
     try {
-      setProgress(onProgress);
       await ffmpeg.exec(args);
       return await readOutputAsBlob("output.mp4", "video/mp4");
     } finally {
-      setProgress(undefined);
+      // nothing to cleanup for progress
     }
   }
 

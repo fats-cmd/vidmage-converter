@@ -26,42 +26,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Progress / stage animation styles */
-.stage-animate {
-  display: inline-block;
-  padding: 0.125rem 0.5rem;
-  border-radius: 0.25rem;
-  background: rgba(255, 255, 255, 0.02);
-  color: inherit;
-  animation: stagePulse 1.8s linear infinite;
-}
-
-@keyframes stagePulse {
-  0% {
-    transform: translateY(0);
-    opacity: 0.9;
-  }
-  50% {
-    transform: translateY(-3px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 0.9;
-  }
-}
-
-.progress-spinner {
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-top-color: rgba(255, 255, 255, 0.75);
-  border-radius: 9999px;
-  animation: spin 1s linear infinite;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
+/* stage/progress animation removed - simplified UI */
 
 /* vidd logo + text glow animation styles */
 .vidd-wrap {

@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { useFfmpeg } from "@/hooks/useFfmpeg";
+// import { useFfmpeg } from "@/hooks/useFfmpeg";
 import GifConverter from "./converters/GifConverter";
 import MkvConverter from "./converters/MkvConverter";
 import Mp4Converter from "./converters/Mp4Converter";
@@ -16,8 +16,8 @@ type selectFileProps = {
 
 const Test: React.FC<selectFileProps> = ({
   onFileSelect,
-  onGifResult,
-  onMkvResult,
+  // onGifResult,
+  // onMkvResult,
 }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const convertToGifRef = useRef<HTMLButtonElement | null>(null);
@@ -43,13 +43,13 @@ const Test: React.FC<selectFileProps> = ({
     };
   }, [fileUrl, gifUrl, mkvUrl]);
 
-  const {
-    convertToGif,
-    convertToMkv,
-    convertToMp4,
-    convertAudioToAc3,
-    containerCopy,
-  } = useFfmpeg();
+  // const {
+  //   convertToGif,
+  //   convertToMkv,
+  //   convertToMp4,
+  //   convertAudioToAc3,
+  //   containerCopy,
+  // } = useFfmpeg();
 
   // function to handle file change
   const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
