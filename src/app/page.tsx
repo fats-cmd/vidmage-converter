@@ -75,12 +75,12 @@ export default function Home() {
               </span>
 
               <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                Convert Videos and Images to GIF
+                Convert Videos and Images to any format
               </span>
             </h1>
 
             <p className="text-gray-400 text-xl max-w-2xl">
-              Transform your videos and images into high-quality GIFs instantly.
+              Transform your videos and images into any format instantly.
               No signup required, completely free.
             </p>
 
