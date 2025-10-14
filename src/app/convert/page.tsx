@@ -13,7 +13,7 @@ export default function ConvertPage() {
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Convert your file to GIF
+              Convert your file.
             </h1>
             <p className="text-gray-400">
               Upload your video or image file to get started
