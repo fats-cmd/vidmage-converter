@@ -57,7 +57,7 @@ body {
 @keyframes viddGlow {
   0% {
     transform: translateY(0) scale(1);
-    filter: drop-shadow(0 0 0 rgba(59, 130, 246, 0));
+    filter: drop-shadow(0 0 0 rgba(59, 130, 246, 0)); 
   }
   50% {
     transform: translateY(-4px) scale(1.04);

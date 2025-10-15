@@ -19,7 +19,7 @@ export default function About() {
 
         <p className="text-lg text-gray-300 mb-4">
           I went looking for tools online and stumbled upon <code>ffmpeg</code>,
-          the swiss-army knife of video. It could convert the file in the CLI —
+          the swiss-army knife of video. It could convert the file in the CLI,
           but honestly, the command line felt like decoding ancient hieroglyphs.
           Tools existed, but I wanted something that fit my workflow: a browser
           friendly, local (privacy-first) converter with a friendly UI. And so
@@ -38,8 +38,10 @@ export default function About() {
           If you like tinkering, improving UX, or making conversion pipelines
           faster and friendlier, vidd is open source and welcomes contributions.
           Whether it's improving the UI, optimizing FFmpeg flags, or adding more
-          formats, all help is appreciated. ❤️ here is my github Link:
-          <a href="http://github.com/fats-cmd">my github</a>
+          formats, all help is appreciated. ❤️ here is my github Link:{" "}
+          <a href="http://github.com/fats-cmd" className="text-blue-500">
+            my github
+          </a>
         </p>
 
         <div className="mt-8">
