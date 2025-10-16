@@ -1,8 +1,8 @@
-Title: I built "vidd" a browser-based FFmpeg converter after my TV rejected my MKV (open source, for those looking toi contribute)
+Title: I built "vidd" a browser-based FFmpeg converter after my TV rejected my MKV (open source, for those looking to contribute)
 
-Hey everyone! 👋
+Hey anyone! 👋
 
-Short and sweet: I built a tiny tool called **vidd**(i know the names lame) to convert videos/images in the browser using FFmpeg, mostly because of a very relatable pain point.
+ I built a tiny tool called **vidd**(i know the names lame) to convert videos/images in the browser using FFmpeg, mostly because of a very relatable pain point.
 
 My story :-
 - I plugged a USB into my TV to watch a movie. The file was an MKV. The TV said "nope." So I re-downloaded the movie as an MP4. Waste of time? Absolutely. 😩
