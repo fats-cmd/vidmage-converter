@@ -14,11 +14,13 @@ export function useFfmpeg() {
     const ffmpeg = new FFmpeg();
     const coreURL = await toBlobURL(
       `${baseURL}/ffmpeg-core.js`,
-      "text/javascript"
+      "text/javascript",
+      true
     );
     const wasmURL = await toBlobURL(
       `${baseURL}/ffmpeg-core.wasm`,
-      "application/wasm"
+      "application/wasm",
+
     );
     await ffmpeg.load({ coreURL, wasmURL });
     ffmpegRef.current = ffmpeg;
@@ -37,33 +39,6 @@ export function useFfmpeg() {
     const data = await ffmpeg.readFile(name);
     const arr = data instanceof Uint8Array ? data : new Uint8Array(data as any);
     return new Blob([arr], { type: mime ?? "application/octet-stream" });
-  }
-
-  function setProgress(cb?: (ratio: number) => void) {
-    const ffmpeg = ffmpegRef.current as any;
-    if (!ffmpeg) return;
-    // Only call setProgress if it's available on the ffmpeg instance.
-    // Some builds/versions may not expose setProgress on the runtime object.
-    const sp = ffmpeg.setProgress;
-    if (typeof sp === "function") {
-      if (cb) {
-        sp((progress: any) => {
-          try {
-            // normalize/ clamp to 0..1
-            let ratio = Number(progress?.ratio ?? 0) || 0;
-            if (!isFinite(ratio)) ratio = 0;
-            if (ratio < 0) ratio = 0;
-            if (ratio > 1) ratio = 1;
-            cb(ratio);
-          } catch (e) {
-            // swallow
-          }
-        });
-      } else {
-        // clear progress handler
-        sp(() => {});
-      }
-    }
   }
 
   async function convertToGif(
