@@ -19,8 +19,7 @@ export function useFfmpeg() {
     );
     const wasmURL = await toBlobURL(
       `${baseURL}/ffmpeg-core.wasm`,
-      "application/wasm",
-
+      "application/wasm"
     );
     await ffmpeg.load({ coreURL, wasmURL });
     ffmpegRef.current = ffmpeg;
